@@ -58,4 +58,4 @@ The Blog
       </div>
     </main>
 @endsection
-
+<!-- Welcome.blade -->
