@@ -32,7 +32,6 @@
 @endsection
 
 @section('content')
-
 <!-- Main Content -->
 <main class="main-content">
 
@@ -43,9 +42,7 @@
 |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
 !-->
 <div class="section" id="section-content">
-<h2>{{$post->title}}</h2>
   <div class="container">
-    
         {!!$post->content!!}  
 
         

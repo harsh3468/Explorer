@@ -5,7 +5,7 @@
                 <form class="input-group" action="" method="GET">
                   <input type="text" class="form-control" name="search" placeholder="Search" value="{{request()->query('search')}}">
                   <div class="input-group-addon">
-                    <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <span class="input-group-text"><i class="ti-search"></i></span>
                   </div>
                 </form>
 
@@ -54,6 +54,6 @@
 
                 <h6 class="sidebar-title">About</h6>
                 
-                <p class="small-3">This Website is Created by Rocco Team</p>
+                <p class="small-3">This CMS is created by KANAK GOEL in LARAVEL</p>
               </div>
             </div>
