@@ -115,9 +115,8 @@ class PostsController extends Controller
     //    check if there is a new image
         if($request->hasFile('image')){
         //    upload it
-        $image = $request->image->store('posts');
+        $image = $request->image->store('storage/posts/');
          //    delete the old one
-         
          $post->deleteImage();//User defined Function(we defined it in the Post Model by ourself) 
 
          $data['image']=$image;

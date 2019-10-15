@@ -21,7 +21,7 @@
                 @foreach($posts as $post)
                     <tr>
                         <td><img src="{{asset($post->image)}}" width="100px" height="50px" alt=""></td>
-                        <!-- <td>{{$post->image}}</td> -->
+                        
                         <td>{{$post->title}}</td>
                         <td>
                             <a href="{{route('categories.edit',$post->category->id)}}">

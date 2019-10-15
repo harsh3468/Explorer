@@ -7,7 +7,7 @@
 
 @section('header')
  <!-- Header -->
- <header class="header text-white h-fullscreen pb-80" style="background-image: url({{asset($post->image)}});" data-overlay="9">
+ <header class="header text-white h-fullscreen pb-80 mt-5" style="background-image: url({{asset($post->image)}});" data-overlay="9">
       <div class="container text-center">
 
         <div class="row h-100">
@@ -32,6 +32,7 @@
 @endsection
 
 @section('content')
+
 <!-- Main Content -->
 <main class="main-content">
 
@@ -42,7 +43,9 @@
 |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
 !-->
 <div class="section" id="section-content">
+<h2>{{$post->title}}</h2>
   <div class="container">
+    
         {!!$post->content!!}  
 
         
@@ -110,4 +113,5 @@
 
 
 </main>
+
 @endsection

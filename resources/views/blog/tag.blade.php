@@ -5,12 +5,12 @@
 @endsection
 @section('header')
    <!-- Header -->
-   <header class="header text-center text-white" style="background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);">
+   <header class="header text-center text-white mt-5" style=" background-image: url('{{asset('img/backgroundcounter.jpg')}}')">
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto">
             <h1>{{$tag->name}}</h1>
-            <p class="lead-2 opacity-90 mt-6">Read and get updated on how we progress</p>
+            <a href="{{route('blog.details',$tag->id)}}" style="color:white">Know Recruitment Process</a>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
                 @forelse($posts as $post)
                 <div class="col-md-6">
                   <div class="card border hover-shadow-6 mb-6 d-block">
-                    <a href="{{route('blog.show',$post->id)}}"><img class="card-img-top" src="{{asset($post->image)}}" alt="Card image cap"></a>
+                    <a href="{{route('blog.show',$post->id)}}"><img class="card-img-top" src="{{asset($post->image)}}" style="height:200px;" alt="Card image cap"></a>
                     <div class="p-6 text-center">
                       <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#">{{$post->category->name}}</a></p>
                       <h5 class="mb-0"><a class="text-dark" href="{{route('blog.show',$post->id)}}">{{$post->title}}</a></h5>

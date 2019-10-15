@@ -37,7 +37,8 @@ class TagsController extends Controller
     {
     
         Tag::create([
-            'name' =>$request->name
+            'name' =>$request->name,
+            'details'=>$request->details
         ]);
         session()->flash('success','Tag created Successfully');
         return redirect(route('tags.index'));
@@ -75,9 +76,11 @@ class TagsController extends Controller
      */
     public function update(UpdateTagRequest $request, Tag $tag)
     {
-        
+           
         $tag->update([
-        'name' =>$request->name
+        'name' =>$request->name,
+        'details' =>$request->details
+
     ]);
                    session()->flash('success','Tag Updated Successfully');
                    return redirect(route('tags.index'));

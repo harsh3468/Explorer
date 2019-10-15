@@ -16,6 +16,16 @@ Route::get('/','WelcomeController@index')->name('welcome');
 Route::get('blog/posts/{post}',[PostsController::class,'show'])->name('blog.show');
 Route::get('blog/categories{category}',[PostsController::class,'category'])->name('blog.category');
 Route::get('blog/tags{tag}',[PostsController::class,'tag'])->name('blog.tag');
+Route::get('blog/tags{tag}/details',[PostsController::class,'details'])->name('blog.details');
+Route::get('about',function(){
+    return view('About_us/about');
+});
+Route::get('discuss',function(){
+    return view('About_us/discuss');
+});
+Route::get('coupon',function(){
+    return view('About_us/coupon');
+});
 
 Auth::routes();
 
